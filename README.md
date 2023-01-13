@@ -15,7 +15,7 @@ Using RapidAPI to generate random quotes using the React Native Framework for a 
  
  Clone this repo:
  
-https://github.com/thisgirlElan/QuoteGenerator.git
+git clone https://github.com/thisgirlElan/QuoteGenerator.git
 
  For yarn
 
