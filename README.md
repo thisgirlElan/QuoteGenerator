@@ -1,7 +1,7 @@
 # QuoteGenerator
 Using RapidAPI to generate random quotes using the React Native Framework for a simple single page android application.
 
-# 👔 features include:
+# 👔 Features include:
 - Copy to clipboard
 - Tweet quote
 - Share quote via whatsapp
