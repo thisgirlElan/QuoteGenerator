@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   SafeAreaView,
   StatusBar,
+  ScrollView,
   StyleSheet,
   Text,
   Pressable,
@@ -37,7 +38,7 @@ class App extends Component {
     fetch(API_URL, OPTIONS).then(res => res.json()).then(result => {
       this.setState({
         quote: result.content,
-        author: result.originator.name,
+        author: result.originator.name == 'undefined' ? '' : result.originator.name,
         loading: false
       });
     })
@@ -96,9 +97,12 @@ class App extends Component {
               }}
               color="#000"
             />
+            <ScrollView 
+            style={{paddingVertical: 10}}>
             <Text style={styles.quote}>
               {this.state.loading ? 'fetching quote, just a moment..' : this.state.quote}
             </Text>
+            </ScrollView>
             <FontAwesome5
               name='quote-right'
               size={20}
@@ -196,7 +200,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     fontSize: 16,
     color: '#000',
-    marginHorizontal: 10
+    marginHorizontal: 10,
   },
   quote: {
     color: '#000',
@@ -217,14 +221,14 @@ const styles = StyleSheet.create({
   },
   quoteContainer: {
     width: '90%',
+    maxHeight: '75%',
     backgroundColor: 'white',
     borderRadius: 20,
-    padding: 20
+    padding: 20,
   },
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    // backgroundColor: '#5372F0'
+    alignItems: 'center'
   }
 });
