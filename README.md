@@ -29,7 +29,7 @@ For npm
 - npx react-native run-android
 - npx react-native start (optional)
 
-- After the commands run, you should see the quotes screen.
+After the commands run, you should see the quotes screen.
 
 
 # 👨‍💻 You're ready! 
